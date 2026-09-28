@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan DOM JavaScript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 32px 20px;
+            display: grid;
+            place-items: center;
+            background: #f3f6f4;
+            color: #202b27;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            width: min(100%, 560px);
+            padding: 36px;
+            border: 1px solid #dce5df;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 16px 40px rgb(29 55 42 / 8%);
+        }
+
+        .label {
+            margin: 0 0 12px;
+            color: #25805b;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+        }
+
+        .description {
+            margin: 14px 0 28px;
+            color: #59665f;
+            line-height: 1.6;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        button {
+            min-height: 46px;
+            padding: 0 18px;
+            border: 0;
+            border-radius: 6px;
+            background: #217a55;
+            color: #fff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #185f41;
+        }
+
+        button:focus-visible {
+            outline: 3px solid #9dd8b9;
+            outline-offset: 3px;
+        }
+
+        button.secondary {
+            border: 1px solid #cbd8d0;
+            background: #fff;
+            color: #24533d;
+        }
+
+        button.secondary:hover {
+            background: #eef6f0;
+        }
+
+        @media (max-width: 420px) {
+            main {
+                padding: 28px 22px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p class="label">Latihan Dasar</p>
+        <h1 id="judul">Belajar DOM JavaScript</h1>
+        <p class="description">Coba klik tombol di bawah untuk melihat bagaimana JavaScript berinteraksi dengan elemen halaman.</p>
+        <div class="actions">
+            <button id="myBtn" type="button">Klik untuk Alert</button>
+            <button id="tombol" class="secondary" type="button">Ubah Judul</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
